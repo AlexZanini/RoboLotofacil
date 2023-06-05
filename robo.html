@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <title>ROBÔ LOTOFÁCIL</title>
+</head>
+
+<body>
+
+
+    <div id="margemTop"></div>
+
+
+  <div class="container row col-md-6 mx-auto">
+
+    <header >
+      <div class="jumbotron text-center rounded-lg">
+        <h1 class="display-3 font-weight-bold"><strong>ROBÔ LOTOFÁCIL</strong></h1>
+        
+  
+        
+      </div>
+    </header>
+
+
+    <!-- Impares -->
+    <div class="divisor">
+      <p>Impares</p>
+    </div>
+    <div>
+      <h5>Informe a quantidade de números impares a serem sorteados:</h5>
+      <input class="form-control" type="number" id="qtde-sortear-impar" name="qtde-sortear"
+        placeholder="Númeroros de 1 a 13"> <br>
+      <button class="btn btn-dark" id="btn-sortear-impar" type="button">Sortear Impares</button>
+      <p class="display-6" id="resultado-impar"></p>
+    </div>
+
+    <!-- Pares -->
+    <div class="divisor">
+      <p>Pares</p>
+    </div>
+    <div>
+      <h5>Informe a quantidade de números pares a serem sorteados:</h5>
+      <input class="form-control" type="number" id="qtde-sortear-par" name="qtde-sortear"
+        placeholder="Númeroros de 1 a 12"> <br>
+      <button class="btn btn-dark" id="btn-sortear-par" type="button">Sortear Pares</button>
+      <p class="display-6" id="resultado-par"></p>
+    </div>
+
+    <!-- Sorteio anterior -->
+    <div class="divisor">
+      <p>Sorteio anterior</p>
+    </div>
+    <form id="formAntigos">
+      <h5>Insira os 15 números do sorteio anterior:<br />
+        Observação: <br> Utilize a vírgula para separá-los, ex: (1, 4, 11, 23).</h5>
+      <input class="form-control" type="text" id="numbers-anteriores" name="numbers-anteriores"
+        placeholder="insira os 15 números"><br>
+      <button class="btn btn-dark" type="submit">Enviar</button> <br>
+      <p> Inseridas: <span id="sorteio-anterior-inceridos"></span> </p>
+    </form>
+
+    <div>
+      <h5>Quantidade de números a sortear:</h5>
+      <input class="form-control" type="number" id="qtde-sorteio-anterior" name="qtde-sortear-anteriores"><br>
+      <button class="btn btn-dark" id="btn-sortear-anterior" type="button">Sortear</button>
+      <p class="display-6" id="resultado-anterior"></p>
+    </div>
+    <!-- Não sorteadas -->
+    <div class="divisor">
+      <p>Não sorteados</p>
+    </div>
+    <form id="formNãoSorteadas">
+      <h5>Insira os 10 números que não foram sorteadas no sorteio anterior:<br />
+        Observação: <br> Utilize a vírgula para separá-los, ex: (1, 4, 11, 23).</h5>
+      <input class="form-control" type="text" id="numbers-nao-sorteadas" name="numbers-nao-sorteadas"
+        placeholder="insira os 10 números"><br>
+      <button class="btn btn-dark" type="submit">Enviar</button>
+      <p> Inseridas: <span id="sorteio-nao-sorteados-inceridos"></span> </p>
+    </form>
+
+    <div>
+      <p>Quantidade de números a sortear:</p>
+      <input class="form-control" type="number" id="qtde-nao-sorteadas" name="qtde-sortear-anteriores"><br>
+      <button class="btn btn-dark" id="btn-nao-sorteadas" type="button">Sortear</button>
+      <p class="display-6" id="resultado-nao-anterior"></p>
+    </div>
+
+    <div id="footerdiv"></div>
+
+  </div>
+
+
+
+  <!-- Link Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <script src="./scripts/sorteioImpar.js"></script>
+  <script src="./scripts/sorteioPar.js"></script>
+  <script src="./scripts/sorteioAnterior.js"></script>
+  <script src="./scripts/sorteioNaoSorteadas.js"></script>
+
+</body>
+
+</html>
